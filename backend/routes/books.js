@@ -21,3 +21,19 @@ router.post('/', async (req, res) => {
         res.status(201).json(newBook);
     }
 });
+
+// check out a book
+router.put('/:id', async (req, res) => {
+    const book = await Book.findOne({ id: req.params.id });
+    if (!book) {
+        return res.status(404).json({ message: 'Book not found' });
+    } else if (book.status === false) {
+        return res.status(400).json({ message: 'Book is already checked out' });
+    } else {
+        book.status = false;
+        book.checkedOutBy = req.body.checkedOutBy;
+        book.dueDate = req.body.dueDate;
+        await book.save();
+        res.json(book);
+    }
+});
