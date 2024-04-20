@@ -10,6 +10,13 @@ router.get('/', async (req, res) => {
     res.json(books);
 });
 
+// get all checked out books
+router.get('/checkedout', async (req, res) => {
+    const status = req.query.status === 'false';
+    const books = await Book.find({ status });
+    res.json(books);
+});
+
 // post a new book
 router.post('/', async (req, res) => {
     const newBook = new Book(req.body);
@@ -64,3 +71,6 @@ router.put('/:id', async (req, res) => {
         res.json(book);
     }
 });
+
+// export the router
+module.exports = router;   
