@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
 });
 
 // check out a book
-router.put('/:id', async (req, res) => {
+router.post('/:id', async (req, res) => {
     const book = await Book.findOne({ id: req.params.id });
     if (!book) {
         return res.status(404).json({ message: 'Book not found' });
@@ -37,3 +37,20 @@ router.put('/:id', async (req, res) => {
         res.json(book);
     }
 });
+
+// check in a book
+router.post('/checkin/:id', async (req, res) => {
+    const book = await Book.findOne({ id: req.params.id });
+    if (!book) {
+        return res.status(404).json({ message: 'Book not found' });
+    } else if (book.status === true) {
+        return res.status(400).json({ message: 'Book is already checked in' });
+    } else {
+        book.status = true;
+        book.checkedOutBy = null;
+        book.dueDate = null;
+        await book.save();
+        res.json(book);
+    }
+});
+
