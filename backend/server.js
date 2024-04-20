@@ -21,3 +21,18 @@ mongoose.connect(mongoCS, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.on("error", console.error.bind(console, "MongoDB connection error:"));
 connection.once("open", function() { console.log("connected");  });
+
+
+//routes
+const booksRouter = require('./routes/books');
+app.use('/books', booksRouter);
+
+// welcome message for the root route
+app.get('/', (req,res) => { 
+    res.send("Welcome to the library server"); 
+});
+
+// listen for requests
+app.listen(3000, () => {
+    console.log("Server is listening on port 3000");
+});
