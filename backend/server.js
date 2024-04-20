@@ -15,7 +15,8 @@ app.use(function(req, res, next){
   });
 
 //connect to MongoDB
-const mongoCS = require('dotenv').config();
+require('dotenv').config();
+const mongoCS = process.env.MONGODB_URI;
 mongoose.connect(mongoCS, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const connection = mongoose.connection;

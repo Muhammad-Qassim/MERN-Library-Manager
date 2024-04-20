@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
+const { Schema, model } = mongoose;
 
 const bookSchema = new mongoose.Schema({
-    id: { type: Number, required: true },
+    id: { type: Number},
     title: { type: String, required: true },
-    author: { type: string, required: true },
-    publisher: { type: string, required: true },
+    author: { type: String, required: true },
+    publisher: { type: String, required: true },
     ISBN: { type: Number, required: true },
-    status: { type: Boolean, default: 'available' },
+    status: { type: Boolean, default: true },
     checkedOutBy: { type: String, default: null },
     dueDate: { type: Date, default: null },
 });
