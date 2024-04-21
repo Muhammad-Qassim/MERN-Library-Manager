@@ -1,8 +1,30 @@
-.row {
-  width: 100%;
-  height: 80ch;
+:root {
+  --color-primary: #198754;
+  --color-secondary: #212529;
+}
+
+body {
+  background-color: #faf9f7;
+  min-height: 100vh;
   margin: 0;
 }
+
+/* Headings with secondary color and font */
+h1.secondary-heading,
+h2.secondary-heading {
+  color: var(--color-primary);
+  font-family: "Simplifica", sans-serif;
+  margin: 0;
+}
+
+/* Headings with just a different font */
+h1.font-only-heading,
+h2.font-only-heading {
+  font-family: "Simplifica", serif;
+  margin: 0;
+}
+
+/* Navbar */
 
 .navbar-brand {
   font-size: 1.75rem;
@@ -11,8 +33,22 @@
   color: #333;
 }
 
+/* Footer */
+
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
 }
+
+/* BOOKLISTS */
+
+.header {
+  font-weight: bold;
+}
+
+.item {
+  padding: 0.5rem 5rem;
+  width: 100%;
+}
+

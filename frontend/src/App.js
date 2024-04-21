@@ -1,12 +1,14 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+// imports for components
+import AvailableBookList from "./components/AvailableBookList";
 
 function Nav() {
   return (
     <nav className = "navbar navbar-dark bg-dark pt-3 pb-3">
       <div className="container">
-          <a className="navbar-brand mx-auto" href="#">MERN Library Management</a>
+          <a className="navbar-brand mx-auto" href="#"><h2 className="secondary-heading">MERN Library Management</h2></a>
         </div>
     </nav>
 );
@@ -27,8 +29,8 @@ function App() {
   return (
     <div>
       <Nav/>
-      <div>
-        <h1>BODY</h1>
+      <div className="container mt-3 mb-3">
+        <AvailableBookList/>
       </div>
       <Footer/>
     </div>
