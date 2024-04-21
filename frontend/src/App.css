@@ -36,8 +36,6 @@ h2.font-only-heading {
 /* Footer */
 
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
