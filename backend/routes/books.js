@@ -61,7 +61,16 @@ router.post("/checkin/:id", async (req, res) => {
     res.json(book);
   }
 });
-
+//search for book id by title
+router.get("/:title", async (req, res) => {
+  const titleRegex = new RegExp(req.params.title, "i");
+  const book = await Book.findOne({ title: titleRegex });
+  if (!book) {
+    return res.status(404).json({ message: "Book not found" });
+  } else {
+    res.json(book);
+  }
+});
 
 // export the router
 module.exports = router;
