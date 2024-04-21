@@ -1,4 +1,4 @@
-#Book Library Management System
+# Book Library Management System
 
 ## Overview
 
@@ -8,13 +8,13 @@ Welcome to the MERN (MongoDB, Express, React, Node.js) Book Management System! T
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Setup and Installation](#Setup-and-Installation)
-  - [Backend (Express Server)](####Backen-(Express-Server))
-  - [Frontend (React App)](#Frontend-(React-App))
+- [Setup and Installation](#setup-and-installation)
+  - [Backend](#backend)
+  - [Frontend](fFrontend)
   - [Running the Application](#running-the-application)
 - [Usage](#usage)
   - [API Endpoints](#api-endpoints)
-  - [Frontend App](#Frontend-App)
+  - [Frontend App](#frontend-app)
 - [Contributing](#contributing)
 
 ## Features
@@ -38,7 +38,7 @@ Welcome to the MERN (MongoDB, Express, React, Node.js) Book Management System! T
 
 ## Setup and Installation
 
-### Backend (Express Server)
+### Backend
 
 1. Clone the repository
 ```
@@ -53,21 +53,30 @@ cd backend
 npm install
 ```
 3. Create a `.env` file and add the following variable: `MONGODB_URI=your_mongodb_uri`
-	* To use `.env` file, install `dotenv` package: 
-    ```npm install dotenv```
 
-### Frontend (React App)
+* To use `.env` file, install `dotenv` package:
+```
+npm install dotenv
+```
+
+### Frontend
 
 1. Navigate to the frontend folder 
 ```
 cd frontend
 ```
 2. Install dependencies: 
-```npm install```
-3. Install Axios: 
-```npm install axios```
-4. Install Bootstrap: 
-```npm install bootstrap```
+```
+npm install
+```
+4. Install Axios: 
+```
+npm install axios
+```
+6. Install Bootstrap: 
+```
+npm install bootstrap
+```
 
 ### Running the Application
 
@@ -96,10 +105,10 @@ cd ../client && npm install
 Once the application is running, you can use the following steps to interact with the system:
 
 1. **Viewing Available Books**:
-- Automatically list  list of all available books in the system.
+- Automatically list all available books in the system.
 
 2. **Viewing Checked-Out Books**:
-- Automatically list of all books that are currently checked out.
+- Automatically list all books that are currently checked out.
 
 3. **Searching for a Book by Title**:
 - Use the search bar provided to search for a book by its title.
