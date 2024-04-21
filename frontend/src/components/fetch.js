@@ -7,7 +7,7 @@ export const fetchBooks = () => {
 };
 
 export const fetchCheckedOutBooks = () => {
-  return axios.get('http://localhost:3000/books/checkedout?status=false')
+  return axios.get('http://localhost:3000/books/checkedout')
     .then(res => res.data)
     .catch(err => console.log(err));
 };

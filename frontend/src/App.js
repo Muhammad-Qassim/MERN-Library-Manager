@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // imports for components
@@ -31,8 +31,8 @@ function Footer() {
 
 
 function App() {
-  const [books, setBooks] = React.useState([]);
-  const [checkedOutBooks, setCheckedOutBooks] = React.useState([]);
+  const [books, setBooks] = useState([]);
+  const [checkedOutBooks, setCheckedOutBooks] = useState([]);
 
   useEffect(() => {
     fetchBooks().then(data => setBooks(data));
