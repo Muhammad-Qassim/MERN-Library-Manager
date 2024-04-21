@@ -23,9 +23,14 @@ function CheckinBooks({ fetchBooks, fetchCheckedOutBooks }) {
 
   return (
     <div>
-      <h1 className="secondary-heading mb-3 mt-4">Check In Book</h1>
+      <div className="text">
+        <h1 className="secondary-heading mt-4">Check In Book</h1>
+      </div>
+      <div className="header">
+        <div className="underline mb-4"></div>
+      </div>
       <Form className="row">
-        <Form.Group controlId="bookId" className="col-md-3">
+        <Form.Group controlId="bookId" className="col-md-6">
           <Form.Control
             type="text"
             name="bookId"
@@ -34,8 +39,13 @@ function CheckinBooks({ fetchBooks, fetchCheckedOutBooks }) {
             placeholder="Book ID"
           />
         </Form.Group>
-        <div className="col-md-3">
-          <Button variant="success" type="submit" onClick={handleSubmit} className="w-100">
+        <div className="col-md-6">
+          <Button
+            variant="success"
+            type="submit"
+            onClick={handleSubmit}
+            className="w-100"
+          >
             Check In
           </Button>
         </div>

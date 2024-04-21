@@ -1,10 +1,12 @@
-
-
-function CheckedoutBookList({checkedOutBooks}) {
-
+function CheckedoutBookList({ checkedOutBooks }) {
   return (
     <div>
-      <h1 className="secondary-heading mt-4 mb-3">  Checked Out Books</h1>
+      <div className="text">
+        <h1 className="secondary-heading mt-4">Checked out Books</h1>
+      </div>
+      <div className="header">
+        <div className="underline"></div>
+      </div>
       <ul className="list-group list-group-horizontal header">
         <li className="list-group-item item w-25">ID</li>
         <li className="list-group-item item">Title</li>

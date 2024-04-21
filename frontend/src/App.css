@@ -10,17 +10,17 @@ body {
 }
 
 /* Headings with secondary color and font */
-h1.secondary-heading,
-h2.secondary-heading {
+h1.primary-heading,
+h2.primary-heading {
   color: var(--color-primary);
   font-family: "Simplifica", sans-serif;
   margin: 0;
 }
 
-/* Headings with just a different font */
-h1.font-only-heading,
-h2.font-only-heading {
-  font-family: "Simplifica", serif;
+/* Headings with  different color abd font */
+h1.secondary-heading,
+h2.secondary-heading {
+  color: var(--color-secondary);
   margin: 0;
 }
 
@@ -50,3 +50,24 @@ footer {
   width: 100%;
 }
 
+/* Design Elements */
+
+.underline{
+  width: 100%;
+  height: 4px;
+  background:var(--color-primary);
+  border-radius: 9px;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.text .secondary-heading{
+  font-size: 2.5rem;
+  font-weight:600;
+}

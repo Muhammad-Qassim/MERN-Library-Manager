@@ -36,7 +36,12 @@ function CheckingoutBooks({ fetchBooks, fetchCheckedOutBooks }) {
 
   return (
     <div className="my-3">
-      <h1 className="secondary-heading mb-3 mt-4">Check Out Book</h1>
+      <div className="text">
+        <h1 className="secondary-heading mt-4">Checkout Book</h1>
+      </div>
+      <div className="header">
+        <div className="underline mb-4"></div>
+      </div>
       <Form onSubmit={handleSubmit} className="row">
         <Form.Group controlId="bookId" className="col-md-3 ">
           <Form.Control
