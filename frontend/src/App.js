@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 // imports for components
 import AvailableBookList from "./components/AvailableBookList";
+import CheckedoutBookList from "./components/CheckedoutBookList";
 
 function Nav() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Nav/>
       <div className="container mt-3 mb-3">
         <AvailableBookList/>
+        <CheckedoutBookList/>
       </div>
       <Footer/>
     </div>
