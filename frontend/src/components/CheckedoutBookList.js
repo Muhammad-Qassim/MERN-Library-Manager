@@ -1,19 +1,6 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 
-function CheckedoutBookList() {
-    const [checkedOutBooks, setCheckedOutBooks] = useState([]);
 
-  useEffect(() => {
-    fetchCheckedOutBooks();
-  }, []);
-
-  const fetchCheckedOutBooks = async () => {
-    axios
-      .get("http://localhost:3000/books/checkedout")
-      .then((res) => setCheckedOutBooks(res.data))
-      .catch((err) => console.log(err));
-  };
+function CheckedoutBookList({checkedOutBooks}) {
 
   return (
     <div>

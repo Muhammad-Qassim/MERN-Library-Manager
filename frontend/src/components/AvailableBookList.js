@@ -1,19 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 
-function AvailableBookList() {
-  const [books, setBooks] = useState([]);
-
-  useEffect(() => {
-    fetchBooks();
-  }, []);
-
-  const fetchBooks = async () => {
-    axios
-      .get("http://localhost:3000/books?status=true")
-      .then((res) => setBooks(res.data))
-      .catch((err) => console.log(err));
-  };
+function AvailableBookList({ books}) {
 
     return (
         <div>
