@@ -18,7 +18,7 @@ function Nav() {
     <nav className="navbar navbar-dark bg-dark pt-3 pb-3">
       <div className="container">
         <a className="navbar-brand mx-auto" href="#">
-          <h2 className="primary-heading">MERN Library Management</h2>
+          <h2 className="primary-heading">Book Library Management System</h2>
         </a>
       </div>
     </nav>
