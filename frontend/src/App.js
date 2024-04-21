@@ -8,6 +8,7 @@ import CheckedoutBookList from "./components/CheckedoutBookList";
 import CheckingoutBooks from "./components/CheckingoutBooks";
 import CheckinBooks from "./components/CheckinBooks";
 import AddBooks from "./components/AddBooks";
+import SearchBooks from "./components/SearchBooks"; 
 
 // imports for fetch functions
 import { fetchBooks, fetchCheckedOutBooks } from "./components/fetch";
@@ -49,6 +50,9 @@ function App() {
       <div className="container mt-3 mb-3">
         <AvailableBookList books={books} />
         <CheckedoutBookList checkedOutBooks={checkedOutBooks} />
+        <SearchBooks
+          handleSearch={(data) => setBooks(data)}
+        />
         <CheckingoutBooks
           fetchBooks={() => fetchBooks().then((data) => setBooks(data))}
           fetchCheckedOutBooks={() =>
