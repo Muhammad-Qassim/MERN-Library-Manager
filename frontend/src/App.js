@@ -1,9 +1,13 @@
 import "./App.css";
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // imports for components
 import AvailableBookList from "./components/AvailableBookList";
 import CheckedoutBookList from "./components/CheckedoutBookList";
+
+// imports for fetch functions
+import { fetchBooks, fetchCheckedOutBooks } from "./components/fetch";
 
 function Nav() {
   return (
@@ -27,12 +31,20 @@ function Footer() {
 
 
 function App() {
+  const [books, setBooks] = React.useState([]);
+  const [checkedOutBooks, setCheckedOutBooks] = React.useState([]);
+
+  useEffect(() => {
+    fetchBooks().then(data => setBooks(data));
+    fetchCheckedOutBooks().then(data => setCheckedOutBooks(data));
+  }, []);
+
   return (
     <div>
       <Nav/>
       <div className="container mt-3 mb-3">
-        <AvailableBookList/>
-        <CheckedoutBookList/>
+        <AvailableBookList books={books}/>
+        <CheckedoutBookList checkedOutBooks={checkedOutBooks}/>
       </div>
       <Footer/>
     </div>
