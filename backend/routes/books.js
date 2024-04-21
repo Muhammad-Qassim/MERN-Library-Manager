@@ -62,18 +62,6 @@ router.post("/checkin/:id", async (req, res) => {
   }
 });
 
-// update a book
-router.put("/:id", async (req, res) => {
-  const book = await Book.findOne({ id: req.params.id }, req.body, {
-    new: true,
-  });
-  if (!book) {
-    return res.status(404).json({ message: "Book not found" });
-  } else {
-    await book.save();
-    res.json(book);
-  }
-});
 
 // export the router
 module.exports = router;
