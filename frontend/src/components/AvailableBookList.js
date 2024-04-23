@@ -11,6 +11,7 @@ function AvailableBookList({ books }) {
         <li className="list-group-item item w-25">ID</li>
         <li className="list-group-item item">Title</li>
         <li className="list-group-item item">Author</li>
+        <li className="list-group-item item">Publisher</li>
         <li className="list-group-item item">ISBN</li>
       </ul>
       <ul className="list-group">
@@ -19,6 +20,7 @@ function AvailableBookList({ books }) {
             <li className="list-group-item item w-25">{book.id}</li>
             <li className="list-group-item item">{book.title}</li>
             <li className="list-group-item item">{book.author}</li>
+            <li className="list-group-item item">{book.publisher}</li>
             <li className="list-group-item item">{book.ISBN}</li>
           </ul>
         ))}
